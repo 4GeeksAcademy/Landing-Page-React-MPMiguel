@@ -1,22 +1,22 @@
 // Card.jsx
-import React from "react"
-;
+import React from "react";
 
-const Card = () => {
+const Card = ({img, title, description, button}) => {
   return (
-    <div className="card col-md-3 col-12 flex-wrap p-2 ">
-      <img src="https://picsum.photos/id/237/500/325" className="card-img-top" alt="Rigo Baby" />
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-        <a href="#" className="btn btn-primary">
-          Find out more!
-        </a>
+      <div className="col-12 col-md-6 col-lg-3 mt-5 ">
+          <div className="card">
+              <div className="ratio ratio-1x1">
+                  <div className="w-100 h-100">
+                      <img src={img}  className="card-img-top img-fluid w-100 h-100 object-fit-cover" alt="..."/>
+                  </div>
+              </div>
+              <div className="card-body text-center">
+                  <h5 className="card-title">{title}</h5>
+                  <p className="card-text">{description}</p>
+                  <a href="#" className="btn btn-primary">{button}</a>
+              </div>
+          </div>
       </div>
-    </div>
   );
 };
 
